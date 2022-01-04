@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Righteous", cursive;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(45, 253, 155, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.button-display {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.rotate-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 2s;
+}
+
+.rotate-button:hover {
+  transform: rotate(180deg);
+}
+
+.color-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 2s, color 2s;
+}
+
+.color-button:hover {
+  background-color: #ffc6ff;
+  color: black;
+}
+
+.border-button {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  color: #b5179e;
+  border: 2px solid #b5179e;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 2.5s, color 2.5s; 
+}
+
+.border-button:hover {
+background-color: #b5179e;
+color: white;
+}
+
+.scale-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+.scale-button:hover {
+  transform: scale(1.2);
+}
+
+.shadow-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: box-shadow 1s ease;
+}
+
+.shadow-button:hover {
+  box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.75);
+}
+
+.hover-button {
+  position: relative;
+  display: inline-block;
+  color: rgb(77, 72, 72);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 2.5s, color 2.5s, border-radius 2s;
+}
+
+.hover-button:hover {
+  background-color: #b5179e;
+  color: white;
+  border-radius: 16px;
+}
