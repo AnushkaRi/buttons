@@ -28,7 +28,7 @@ body {
   box-sizing: border-box;
 }
 
-.header {
+.header, .animation-header {
   display: flex;
   justify-content: center;
 }
@@ -37,7 +37,9 @@ h1 {
   font-size: 4rem;
 }
 
-.button-display, .button-display-1 {
+.button-display, 
+.button-display-1, 
+.button-display-2 {
   display: flex;
   gap: 32px;
   margin-bottom: 32px;
@@ -165,4 +167,129 @@ color: white;
 
 .moving-shadow-button:hover {
   box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+}
+
+/*Animation*/
+/* https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/ */
+.ascend-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  animation-name: ascend;
+  animation-duration: 3s; 
+  animation-timing-function: ease-in; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; /*1 - da se zaustavi animacija*/
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+
+@keyframes ascend {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.background-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  animation: background 4s ease-in infinite;
+}
+
+@keyframes background {
+  0% {
+    background:#b5179e;
+  }
+  100% {
+    background:#013198;
+  }
+}
+
+.spin-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  animation: spin 4s ease 0s 1 forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.scale-button-1 {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  animation: scale 4s ease-out 0s infinite;
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5,0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+
+.blur-button {
+  position: relative;
+  display: inline-block;
+  background-color: #b5179e;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  animation: blur 4s ease 0s infinite;
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0;
+    filter: blur(15px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
